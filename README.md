@@ -1,2 +1,2 @@
-# ImageAnything
-Link: https://vlislab22.github.io/ImageAnything/
+# ExACT
+Link: https://vlislab22.github.io/ExACT/
