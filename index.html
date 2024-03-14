@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>UniBind</title>
-    <meta name="author" content="Yuanhuiyi Lyu, Xu Zheng">
-    <meta name="description" content="Project page of UniBind">
+    <meta name="author" content="JiazhouZHOU">
+    <meta name="description" content="Project page of ExACT">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="eccv_logo.png">
     <!-- Format -->
@@ -26,7 +26,7 @@
     <div class="container" id="main">
         <div class="row">
             <h1 class="col-md-12 text-center">
-                UniBind: LLM-Augmented Unified and Balanced Representation Space to Bind Them All<br /> 
+                ExACT: Language-guided Conceptual Reasoning and Uncertainty Estimation for Event-based Action Recognition and More<br /> 
                 <small>
                     Accepted to CVPR 2024
                 </small>
@@ -133,34 +133,14 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    We present UniBind, a flexible and efficient approach
-                    that learns a unified representation space for seven diverse
-                    modalities - image, text, audio, point cloud, thermal, video,
-                    and event data. Existing works, e.g., ImageBind, treat
-                    the image as the central modality and build an image-
-                    centered representation space; however, the space may be
-                    sub-optimal as it leads to an unbalanced representation
-                    space among all modalities. Moreover, the category names
-                    are directly used to extract text embeddings for the down-
-                    stream tasks, making it hardly possible to represent the se-
-                    mantics of multi-modal data. The "out-of-the-box" insight
-                    of our UniBind is to make the alignment centers modality-
-                    agnostic and further learn a unified and balanced repre-
-                    sentation space, empowered by the large language mod-
-                    els (LLMs). UniBind is superior in its flexible application
-                    to all CLIP-style models and delivers remarkable perfor-
-                    mance boosts. To make this possible, we 1) construct a
-                    knowledge base of text with the help of LLMs and multi-
-                    modal LLMs; 2) adaptively build LLM-augmented class-
-                    wise embedding centers on top of the knowledge base and
-                    encoded visual embeddings; 3) align all the embeddings
-                    to the LLM-augmented embedding centers via contrastive
-                    learning to achieve a unified and balanced representation
-                    space. UniBind shows strong zero-shot recognition perfor-
-                    mance gains over prior arts by an average of 6.36%. Fi-
-                    nally, we achieve new state-of-the-art performance, e.g., a
-                    6.75% gain on ImageNet, on the multi-modal fine-tuning
-                    setting while reducing 90% of the learnable parameters
+	Event cameras have recently been shown beneficial for practical vision tasks, such as action recognition, thanks to their high temporal resolution, power efficiency, and reduced privacy concerns. 
+        However, current research is hindered by 1) the difficulty in processing events because of their prolonged duration and dynamic actions with complex and ambiguous semantics and 2) the redundant action depiction of the event frame representation with fixed stacks.  
+    	We find language naturally conveys abundant semantic information, rendering it stunningly superior in reducing semantic uncertainty.  In light of this, we propose ExACT, a novel approach that, for the first time, 
+   	tackles event-based action recognition from a cross-modal conceptualizing perspective. Our ExACT brings two technical contributions. 
+	Firstly, we propose an adaptive fine-grained event (AFE) representation to adaptively filter out the repeated events for the stationary objects while preserving dynamic ones. 
+	This subtly enhances the performance of ExACT without extra computational cost. Then, we propose a conceptual reasoning-based uncertainty estimation module, which simulates the recognition process to enrich the semantic representation. 
+	In particular, conceptual reasoning builds the temporal relation based on the action semantics, and uncertainty estimation tackles the semantic uncertainty of actions based on the distributional representation. 
+    	Experiments show that our ExACT achieves superior recognition accuracy of 94.83%(+2.23%), 90.10%(+37.47%) and 67.24% on PAF, HARDVS and our SeAct datasets respectively.
                 </p>
             </div>
         </div>
